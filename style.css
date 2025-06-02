@@ -1,0 +1,235 @@
+/* 全局样式 */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --section-padding: 100px 0;
+}
+[data-theme="dark"] {
+    --background-color: #181818;
+    --text-color: #f5f5f5;
+    --secondary-color: #a0a0a0;
+}
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: all 0.3s ease;
+}
+.navbar {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+}
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.nav-link {
+    color: var(--text-color);
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--primary-color);
+}
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"%3E%3Cpath fill="%23ffffff" fill-opacity="0.1" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"%3E%3C/path%3E%3C/svg%3E') no-repeat bottom;
+    background-size: cover;
+}
+.social-links {
+    margin-top: 2rem;
+}
+.social-link {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+.social-link:hover {
+    transform: translateY(-5px);
+    color: white;
+}
+.section {
+    padding: var(--section-padding);
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--text-color);
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 20px auto;
+}
+.skill-category {
+    margin-bottom: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+[data-theme="dark"] .skill-category {
+    background: #232323;
+}
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.skill-category ul {
+    padding-left: 20px;
+}
+/* 软件下载区样式 */
+.software-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 25px 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.software-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.software-card h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+.software-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+}
+/* 收款码区样式 */
+.pay-img {
+    border: 4px solid #eee;
+    border-radius: 16px;
+    margin: 20px 0;
+    max-width: 250px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    background: #fff;
+}
+[data-theme="dark"] .pay-img {
+    border: 4px solid #333;
+    background: #232323;
+}
+/* 项目卡片样式 */
+.project-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+}
+.project-info {
+    padding: 20px;
+}
+.project-links {
+    margin-top: 15px;
+}
+/* 博客卡片样式 */
+.blog-card {
+    background: var(--background-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    transition: transform 0.3s;
+}
+.blog-card:hover {
+    transform: translateY(-10px);
+}
+.blog-info {
+    padding: 20px;
+}
+.blog-date {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+.contact-info {
+    margin-bottom: 30px;
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-right: 15px;
+}
+.contact-form .form-control {
+    background-color: var(--background-color);
+    border: 1px solid var(--secondary-color);
+    color: var(--text-color);
+}
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+.back-to-top:hover {
+    background-color: #0056b3;
+}
+.footer {
+    background-color: var(--background-color);
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid var(--secondary-color);
+}
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .section {
+        padding: 60px 0;
+    }
+    .project-card, .blog-card, .software-card {
+        margin-bottom: 20px;
+    }
+}
+[data-aos] {
+    pointer-events: none;
+}
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+.theme-transition {
+    transition: all 0.3s ease;
+} 
